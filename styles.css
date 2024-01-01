@@ -1,0 +1,166 @@
+ 
+
+/* Stars on the background*/
+
+#space, .stars {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.stars{
+    background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat ;
+    background-size: 200px 200px;
+    animation: zoom 5s infinite;
+    opacity: 0;
+}
+
+.stars:nth-child(1){
+    background-position: 50% 50%;
+    animation-delay: 0s;
+}
+
+.stars:nth-child(2){
+    background-position: 20% 60%;
+    animation-delay: 1s;
+}
+
+.stars:nth-child(3){
+    background-position: -20% -30%;
+    animation-delay: 2s;
+} 
+
+.stars:nth-child(4){
+    background-position: 40% -80%;
+    animation-delay: 3s;
+}
+
+.stars:nth-child(5){
+    background-position: -20% 30%;
+    animation-delay: 4s;
+}
+
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+        animation-timing-function:ease-in;
+    }
+
+    85%{
+        opacity: 1;
+        transform: scale(2.8);
+        animation-duration: linear;
+    }
+     
+    100%{
+        opacity: 0;
+        transform: scale(3.5);
+    }
+}
+
+body{
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+    background: #000;
+}
+
+h1{
+    position: absolute;
+    z-index: 1;
+    top: 27%;
+    left: 33%;
+    margin: -1.5em --2.5em;
+    width: 5em;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 0 0 3px #6cf;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 ::first-line{
+    font-size: 200%;
+}
+
+/* Planets and Celestial bodies*/
+
+.sun{
+    position: absolute;
+    left: 83%;
+    bottom: 20%;
+
+}
+
+.bluey{
+    position: absolute;
+    left: 60%;
+    animation: rotate1 5s infinite;
+}
+
+@keyframes rotate1{
+    0%{
+        transform: rotate(0deg) translate(900px)rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg) translate(550px)rotate(-360deg);
+    }
+}
+
+.bluey1{
+    position: absolute;
+    left: 70%;
+    animation: rotate2 4s infinite;
+}
+
+@keyframes rotate2{
+    0%{
+        transform: rotate(0deg) translate(750px)rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg) translate(400px)rotate(-360deg);
+    }
+}
+
+.bothwam{
+    position: absolute;
+    left: 75%;
+    animation: rotate3 3s infinite;
+}
+
+@keyframes rotate3{
+    0%{
+        transform: rotate(0deg) translate(650px)rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg) translate(400px)rotate(-360deg);
+    }
+}
+
+.femama{
+    position: absolute;
+    left: 75%;
+    animation: rotate4 5s infinite;
+}
+
+@keyframes rotate4{
+    0%{
+        transform: rotate(0deg) translate(500px)rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg) translate(360px)rotate(-360deg);
+    }
+}
